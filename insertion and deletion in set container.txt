@@ -1,0 +1,23 @@
+#include<iostream>
+#include<set>
+#include<iterator>
+using namespace std;
+   void print(set<int>arr)
+   {
+           set<int>::iterator i;
+       for(i=arr.begin();i!=arr.end();i++)
+    cout<<*i<<" ";
+    cout<<endl;
+
+   }
+int main()
+{
+     set<int ,less<int>>arr;
+     set<int>::iterator it1;
+       arr.insert({1,2,3,4,5});
+       print(arr);
+       cout<<"after deletion container is:";
+       it1=arr.begin();
+       arr.erase(it1);
+       print(arr);
+}
